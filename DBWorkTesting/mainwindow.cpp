@@ -15,8 +15,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    userLogin="login";
-    userPassword="password";
+    userLogin="onufriev";
+    userPassword="353044046";
     userHost="localhost";
     localPortDB=3306;
     remotePort=2233;
@@ -68,14 +68,17 @@ void MainWindow::on_connectButton_released()
          regionModel = new RegionModel(this, db);
          ui->table_region->setModel(regionModel);
          ui->table_region->resizeColumnsToContents();
+         ui->table_region->setItemDelegate(new QSqlRelationalDelegate());
 
          districtModel = new DistrictModel(this, db);
          ui->table_district->setModel(districtModel);
          ui->table_district->resizeColumnsToContents();
+         ui->table_district->setItemDelegate(new QSqlRelationalDelegate());
 
          cityModel = new CityModel(this, db);
          ui->table_cities->setModel(cityModel);
          ui->table_cities->resizeColumnsToContents();
+         ui->table_cities->setItemDelegate(new QSqlRelationalDelegate());
 
        }
     else
