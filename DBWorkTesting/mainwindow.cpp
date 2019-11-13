@@ -123,6 +123,8 @@ void MainWindow::on_add_country_released()
     }
 
     countryModel->select();
+    ui->input_country->setText("");
+    ui->input_citizenship->setText("");
 }
 
 void MainWindow::on_delete_country_released()
@@ -172,6 +174,8 @@ void MainWindow::on_add_region_released()
     }
 
     regionModel->select();
+    ui->input_region->setText("");
+    ui->input_cauntry_id->setText("");
 }
 
 void MainWindow::on_delete_region_released()
@@ -210,6 +214,8 @@ void MainWindow::on_button_add_district_released()
     }
 
     districtModel->select();
+    ui->input_district->setText("");
+    ui->input_region_id->setText("");
 }
 
 void MainWindow::on_button_delete_district_released()
@@ -250,6 +256,9 @@ void MainWindow::on_button_add_city_released()
     }
 
     cityModel->select();
+    ui->input_city->setText("");
+    ui->input_phone->setText("");
+    ui->input_disctict_id->setText("");
 }
 
 void MainWindow::on_button_delete_city_released()
